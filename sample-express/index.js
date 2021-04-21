@@ -1,4 +1,5 @@
 const express = require('express');
+const fs = require('fs');
 
 const app = express();
 
@@ -30,8 +31,31 @@ app.get('/name/:country', (req, res)=>{
 
 
 app.post('/register', (req, res)=>{
-  users.push(req.body)
-  res.send()
+  const {username, password} = req.body
+
+  if(!username || !password) {
+    return res.status(400).send("missing some info")
+  }
+  
+  if(password.length < 4) {
+    return res.status(400).send("password must be at least 5 characters")
+  }
+
+  users.push({username, password})
+  fs.readFile('users.json','utf8', (err, data)=>{
+    if(err){
+      return console.log(err)
+    }
+    const usersArray = JSON.parse(data);
+    usersArray.push({username, password})
+    fs.writeFile('users.json', JSON.stringify(usersArray), (err)=>{
+      if(err){
+        return console.log(err)
+      }
+      res.send("registered successfuly")
+    })
+    console.log(data)
+  })
 })
 
 app.get('/users', (req, res)=>{
