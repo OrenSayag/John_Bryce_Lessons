@@ -16,7 +16,8 @@ app.use(session({
   name: 'my-session', //defaultively it would be the id of the session.
 }))
 
-app.use('/auth', require('./routes/auth')) // not a part of the template
+app.use('/auth', require('./routes/auth')) // routing
+app.use('/secrets', require('./routes/secrets')) // routing
 
 app.get('/', (req, res)=>{
   res.send('welocme ot my api')
