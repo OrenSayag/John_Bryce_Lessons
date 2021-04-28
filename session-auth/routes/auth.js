@@ -28,12 +28,22 @@ router.post('/login', (req,res)=>{
   }
   
   // password match 
-  if(user.password===password){
+  if(user.password!==password){
     return res.status(403).send('user not found')
   }
 
   //respond 
-  
+    // save some data from user to the session object
+    // send response
+  req.session.online = true;
+  req.session.user = user;
+
+  res.status(200).send('successfully logged in')
+  // console.log(res.session)
+})
+
+router.get('/test', (req,res)=>{
+  res.send(req.session);
 })
 
 router.post('/register', (req,res)=>{

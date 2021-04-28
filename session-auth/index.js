@@ -4,8 +4,6 @@ const app = express()
 
 app.use(express.json())
 
-app.use('/auth', require('./routes/auth')) // not a part of the template
-
 app.use(session({
   secret: 'BlAhBlAhBlAh', 
   cookie:{
@@ -17,6 +15,8 @@ app.use(session({
   resave: true,
   name: 'my-session', //defaultively it would be the id of the session.
 }))
+
+app.use('/auth', require('./routes/auth')) // not a part of the template
 
 app.get('/', (req, res)=>{
   res.send('welocme ot my api')
