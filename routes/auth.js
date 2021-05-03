@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
 require('dotenv').config()
 
@@ -14,7 +15,7 @@ const users = [
   }
 ];
 
-router.post('/login', (req,res)=>{
+router.post('/login', async (req,res)=>{
   const {username, password} = req.body
   // make sure all info exists
   if (!username || !password){
@@ -30,9 +31,11 @@ router.post('/login', (req,res)=>{
     return res.status(400).send('user not found')
   }
   
+  const match = await bcrypt.compare(password, user.password)
+
   // password match 
-  if(user.password!==password){
-    return res.status(403).send('user not found')
+  if(!match){
+    return res.status(403).send('wrong password')
   }
 
   //respond 
@@ -56,7 +59,7 @@ router.post('/login', (req,res)=>{
 })
 
 
-router.post('/register', (req,res)=>{
+router.post('/register', async (req,res)=>{
   const {username, first_name, last_name, password} = req.body
 
   // make sure all info exists
@@ -69,9 +72,13 @@ router.post('/register', (req,res)=>{
     return res.status(400).send('username is taken')
   }
 
+  const hash = await bcrypt.hash(password, 10)
+  console.log(password, hash)
+
   // add id and last_visit and push it to users array
   users.push({
-    username, first_name, last_name, password,
+    username, first_name, last_name,
+    password: hash,
     last_visit: Date.now(),
     id: Math.random(),
   })
