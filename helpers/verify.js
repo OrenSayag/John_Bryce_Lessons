@@ -1,10 +1,11 @@
 const jwt = require('jsonwebtoken')
 
+require('dotenv').config()
 
 function vu(req, res, next) {
   console.log('token from middeware:',req.headers.authorization)
 
-  jwt.verify(req.headers.authorization, 'BlahBlah777', (err, decoded)=>{
+  jwt.verify(req.headers.authorization, process.env.JWT_SECRET, (err, decoded)=>{
     if(err){return res.status(401).send(err)}
 
     req.user = decoded.username

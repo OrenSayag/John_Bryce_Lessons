@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const jwt = require('jsonwebtoken');
 
+require('dotenv').config()
 
 const users = [
   {
@@ -38,14 +39,15 @@ router.post('/login', (req,res)=>{
   
   user.last_visit = Date.now()
 
-  jwt.sign({id: user.id, username: user.username, last_visit: user.last_visit},
-    'BlahBlah777',
+  jwt.sign(
+    {...user, password:"**********"},
+    process.env.JWT_SECRET,
     {
       expiresIn: '2m'
     },
     (err, token)=>{
       if(err) throw res.status(500).send(err)
-      
+
       res.status(200).send({token})
     }
     )

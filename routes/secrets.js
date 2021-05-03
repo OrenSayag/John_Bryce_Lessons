@@ -1,6 +1,8 @@
 const router = require('express').Router()
 const vu = require('../helpers/verify')
 
+require('dotenv').config()
+
 const secrets = [
   'the earth is flat',
   'vaccines are bad',
@@ -13,7 +15,7 @@ const secrets = [
 router.get('/all', vu  ,(req, res)=>{
   
   res.send({
-    greeting:`hey ${req.session.user.first_name}! Here are some facts to educate you:`,
+    greeting:`hey ${req.user}! Here are some facts to educate you:`,
     secrets})
 })
 
