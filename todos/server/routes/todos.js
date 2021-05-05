@@ -24,7 +24,10 @@ router.get("/", async (req, res) => {
 });
 
 router.post("/", async (req, res) => {
-  const { title } = req.body;
+  let title = req.body.title;
+  // console.log(title)
+  // console.log('hey')
+  // title = 'hey'  
   try {
     const todosArr = await getTodos();
     // push to array ({id, title, completed})
