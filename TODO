@@ -1,0 +1,31 @@
+DONE
+create components + inject ser
+create ser
+
+
+TODOS
+build ser:
+  - tasks arr[] (with interface) {
+    id: number,
+    txt: string,
+    completed: bool
+  }
+  - foo add (txt)
+  - foo del (id)
+  - foo comp (id)
+build components
+  - app
+    form,
+    list
+  - form:
+    div
+      input
+      submit btn, (click) add
+  - list:
+    item *ngFor
+  - item:
+    div
+      div(txt)
+      cb(comp), (click) comp
+      btn(del), (click) del
+cssing
