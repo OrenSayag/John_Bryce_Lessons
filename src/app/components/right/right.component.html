@@ -1,7 +1,8 @@
 <div class="right">
   <div class="title">
     <!-- 1. property binding (string only) -->
-    <h1>Hello, {{title}}</h1>
+    <h1 *ngIf="userType == 'user'">Hello, {{title}}</h1>
+    <h1 *ngIf="userType == 'admin'">Hello, my lord</h1>
   </div>
   <div class="pic">
     <div class="pic">

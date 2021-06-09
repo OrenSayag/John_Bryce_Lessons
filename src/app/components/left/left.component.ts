@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LeftComponent implements OnInit {
 
+  public links:string[] = ['Home', 'Shop', 'About', 'Contact Us']
+
   constructor() { }
 
 

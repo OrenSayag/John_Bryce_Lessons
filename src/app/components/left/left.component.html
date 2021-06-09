@@ -1,3 +1,18 @@
-<div class='right'>
-  <p>left works!</p>
+<div class='left'>
+  <p>Menu:</p>
+  <ul>
+    <li 
+    *ngFor="let link of links"
+    
+    >
+    <!-- <a [href]='link'
+    [ngClass]="{'sm':link.length<=4,'md':link.length>=5,'lg':link.length>=6}"
+    >{{link}} -->
+      <a [href]='link'
+      [ngStyle]="{'color':link.length<=4 ? 'red' : 'yellow'}"
+      >{{link}}
+          
+      </a>
+    </li>
+  </ul>
 </div>
