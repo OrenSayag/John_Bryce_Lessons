@@ -4,7 +4,9 @@
     [checked]="task?.completed"
     (change)="_task.edit(task?task.id:0)"
   >
-  <p>{{task?.txt}}</p>
+  <p
+  [ngClass]="task.completed ? 'comp' : ''"
+  >{{task?.txt}}</p>
   <button
   (click)="_task.del(task?task.id:0)"
   >X</button>
