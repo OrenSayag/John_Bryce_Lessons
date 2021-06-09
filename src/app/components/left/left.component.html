@@ -11,8 +11,8 @@
       <a [href]='link'
       [ngStyle]="{'color':link.length<=4 ? 'red' : 'yellow'}"
       >{{link}}
-          
-      </a>
+    </a>
+    <app-menu-item [linkto]='link' (newGrade)='handleNewGrade($event)'></app-menu-item>
     </li>
   </ul>
 </div>

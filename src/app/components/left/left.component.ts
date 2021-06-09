@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-left',
@@ -11,6 +11,11 @@ export class LeftComponent implements OnInit {
 
   constructor() { }
 
+  public handleNewGrade(e:string):void{
+    console.log(e)
+  }
+
+  // pubic linkto:string = ''
 
   ngOnInit(): void {
   }
