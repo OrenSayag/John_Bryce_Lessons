@@ -1,1 +1,6 @@
-<p>posts-list works!</p>
+<div class="list">
+  <app-posts-preview 
+    *ngFor="let post of _posts.postsArr"
+    [post]="post"
+  ></app-posts-preview>
+</div>

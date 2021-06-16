@@ -20,10 +20,6 @@ generate all the components
       - delPost() :void
       - editPost() :void
       - getSinglePost(id)
-
-
----- TODO ------
-
 - router
   - 
 
@@ -39,6 +35,8 @@ build the components:
     - inject the service
     - ngFor over the array
     - <PostPreview [post]="post">
+
+---- TODO ------
 
   - PostPreviewComponent
     - inject the service?

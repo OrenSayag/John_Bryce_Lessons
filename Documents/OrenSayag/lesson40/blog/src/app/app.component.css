@@ -1,0 +1,14 @@
+.app {
+  height: 100vh;
+}
+
+header {
+  height: 15vh;
+  border-bottom: 3px solid black;
+  background-color: antiquewhite;
+}
+
+main {
+  height: 85vh;
+  background-color: bisque;
+}
