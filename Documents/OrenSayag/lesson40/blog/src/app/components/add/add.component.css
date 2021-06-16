@@ -1,0 +1,7 @@
+input {
+  border: none
+}
+
+.invalid {
+  border-bottom: orangered 2px solid
+}

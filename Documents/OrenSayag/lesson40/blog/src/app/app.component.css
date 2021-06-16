@@ -10,5 +10,6 @@ header {
 
 main {
   height: 85vh;
+  overflow: auto;
   background-color: bisque;
 }

@@ -3,4 +3,6 @@
   <a [routerLink]="['post',post.id]">
     <h1>{{post.title}}</h1>
   </a>
+  <h3>{{post.author}}, {{post.date | date: 'dd/mm/yyyy'}}</h3>
+  <p>{{post.body | bodypreview: 50}}</p>
 </div>

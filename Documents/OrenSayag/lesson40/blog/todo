@@ -36,8 +36,6 @@ build the components:
     - ngFor over the array
     - <PostPreview [post]="post">
 
----- TODO ------
-
   - PostPreviewComponent
     - inject the service?
     - @Input() 
@@ -48,6 +46,12 @@ build the components:
     - inject the service post
     - inject the service ActivatedRoutee (_acr)
     - display the post details
+
+---- TODO ------
+
+
+
+
 
   - AddComponent
     - inject the service post

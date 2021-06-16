@@ -8,6 +8,9 @@ import { PostsListComponent } from './components/posts-list/posts-list.component
 import { PostsPreviewComponent } from './components/posts-preview/posts-preview.component';
 import { SinglePostComponent } from './components/single-post/single-post.component';
 import { AddComponent } from './components/add/add.component';
+import { BodypreviewPipe } from './pipes/bodypreview.pipe';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddReactiveComponent } from './components/add-reactive/add-reactive.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,15 @@ import { AddComponent } from './components/add/add.component';
     PostsListComponent,
     PostsPreviewComponent,
     SinglePostComponent,
-    AddComponent
+    AddComponent,
+    BodypreviewPipe,
+    AddReactiveComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { PostsService } from 'src/app/services/posts.service';
 
 @Component({
   selector: 'app-add',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddComponent implements OnInit {
 
-  constructor() { }
+  constructor(public _posts:PostsService,
+              public _r:Router
+    ) { }
+
+  public post = {
+    title:  "",
+    body:   "",
+    author: "",
+  }
+
+  public submit(){
+    console.log(this.post)
+    this._r.navigateByUrl('')
+  }
 
   ngOnInit(): void {
+
   }
 
 }
