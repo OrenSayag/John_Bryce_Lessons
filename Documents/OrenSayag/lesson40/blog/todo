@@ -1,8 +1,4 @@
 ---- DONE ------
-
-
-
----- TODO ------
 generate all the components
   - PostList
   - PostPreview
@@ -25,7 +21,16 @@ generate all the components
       - editPost() :void
       - getSinglePost(id)
 
+
+---- TODO ------
+
+- router
+  - 
+
+- css grid
+
 build the components:
+
   - NavbarComponent
     - link to PostsList ('/')
     - link to Add ('/add')
