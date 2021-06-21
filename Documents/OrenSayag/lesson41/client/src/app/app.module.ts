@@ -11,6 +11,7 @@ import { ProdItemComponent } from './components/prod-item/prod-item.component';
 import { CartListComponent } from './components/cart-list/cart-list.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { PayComponent } from './components/pay/pay.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,9 @@ import { PayComponent } from './components/pay/pay.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
