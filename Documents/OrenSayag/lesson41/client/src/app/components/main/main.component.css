@@ -1,0 +1,16 @@
+.container{
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+
+} 
+
+main {
+  width: 70vw;
+  
+}
+
+aside {
+ width: 30vw;
+  border-left: 3px solid black;
+}

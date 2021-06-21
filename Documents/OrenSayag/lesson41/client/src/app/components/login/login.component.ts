@@ -12,8 +12,6 @@ export class LoginComponent implements OnInit {
 
   public myForm:FormGroup
 
-
-
   constructor(
     public _fb:FormBuilder, 
     public _data:DataService) { }

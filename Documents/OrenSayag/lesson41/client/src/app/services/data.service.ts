@@ -164,7 +164,11 @@ export class DataService {
       this._r.navigateByUrl("login")
     }
     
-    
+    public getCartSum():number{
+      return this.cartArr.reduce((sum,cart)=>{
+        return sum+cart.price
+      },0)
+    }
     
     
 
