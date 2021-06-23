@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <ul id="messages"></ul>
+  <form id="form">
+    <p id="typing"></p>
+    <input id="input" autocomplete="off"><button>Send Me</button>
+  </form>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+
+    const input = document.querySelector("#input")
+    const form = document.querySelector("#form")
+    const ul = document.querySelector("#messages")
+    const p = document.querySelector("#typing")
+
+    let timeout
+
+    const socket = io()
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (input.value) {
+        console.log(input.value)
+        socket.emit('newMsfFromClient', input.value);
+        const li = document.createElement('li')
+        li.textContent = input.value;
+        ul.appendChild(li)
+        window.scrollTo(0, document.body.scrollHeight)
+        input.value=""
+      }
+    });
+    socket.on('newMsgFromServer', (msg)=>{
+      // console.log('message from server')
+      const item = document.createElement('li');
+      item.textContent = msg;
+      ul.appendChild(item);
+      window.scrollTo(0, document.body.scrollHeight)
+    })
+
+    input.addEventListener("keydown", ()=>{
+      socket.emit("typing")
+    })
+
+    socket.on("typing", ()=>{
+      p.textContent = "someone is typing"
+      clearTimeout(timeout)
+      timeout = setTimeout(() => {
+        p.textContent = ""  
+
+      }, 400)
+
+      
+    })
+
+  </script>
+</body>
+
+</html>
