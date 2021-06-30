@@ -1,4 +1,4 @@
-import MediaModel from ("./media.model")
+import MediaModel from "./media.model"
 
 export default interface RecordModel{
   _id:string,
@@ -9,6 +9,6 @@ export default interface RecordModel{
   se?:number,
   ep?:number,
   medium_id?:{
-    MediaModel
+    MediaModel: MediaModel
   },
 }
