@@ -1,0 +1,50 @@
+-------------DONE-------------
+generate all comoponts and RFC
+app comopont:
+-routing:
+-- /login -> login comopont
+-- /register -> register comopont
+-- /home -> home comopont
+-- /pay -> pay comopont
+login comopont:
+-s: inputs
+-p: history from router
+-f: handleSubmit
+-jsx: inps, submitBtn
+register comopont:
+-s: inputs
+-p: history from router
+-f: handleSubmit
+-jsx: inps, submitBtn
+home comopont:
+-s: cartArr
+-p: history from router
+-f: addToCart, delFromCart
+-e: onlyLoggedUser, fetchCartArr
+-jsx: cart comopont(p: cartArr, delFromCart), prodList comopont(p: addToCart), logOutBtn
+prodList comopont:
+-p: addToCart
+-s: prodArr
+-e: fetchProducts
+-jsx: map over prodArr -> prodItem comopont(p: prod, addToCart)
+prodItem comopont:
+-p: prod, addToCart
+-jsx: img, price addBtn
+
+-------------TODO-------------
+
+
+
+
+cart comopont:
+-p: cartArr, delFromCart, 
+-jsx: map over cartArr -> cartItem comopont(p: cartitem, delFromCart)
+
+cartItem comopont:
+-p: cart, delFromCart, 
+-jsx: img, price, delBtn
+
+pay comopont:
+-s: inputs
+-p: history from router
+-jsx: inputs, payBtn

@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+<<<<<<< HEAD
+=======
+
+
+.prod-list-img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid black;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 80vw auto;
+    grid-template-rows: 1;
+}
+
+.prod-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+.cart-list{
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    flex-direction: column;
+    border-left: 2px solid black;
+}
+
+
+.cart-list-item{
+    width: 100%;
+    border-bottom:2px solid black;
+    display: flex;
+}
+
+.cart-list-item> .info{
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-list-item > img{
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+}
+>>>>>>> ff0ee525d3e6a087ea82a9a4be0efc2195fa1852

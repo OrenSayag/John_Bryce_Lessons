@@ -10,8 +10,17 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "mysql": "^2.18.1"
+=======
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "dotenv": "^9.0.1",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "uuid": "^8.3.2"
+>>>>>>> ff0ee525d3e6a087ea82a9a4be0efc2195fa1852
   }
 }
