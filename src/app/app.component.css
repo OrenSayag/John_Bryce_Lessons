@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-rows: 20% auto;
+  grid-template-columns: 20% auto;
+  grid-template-areas: 
+  'a a'
+  'b c';
+  height: 100%;
+}
+
+.container > * {
+  border: yellow 2px solid;
+}
+
+app-top{
+  grid-area: a;
+  background-color: blueviolet;
+}
+
+app-left{
+  grid-area: b;
+  background-color:brown;
+}
+
+app-right{
+  grid-area: c;
+  background-color: limegreen;
+}
+

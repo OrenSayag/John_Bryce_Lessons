@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "todo",
+=======
+  "name": "shopping-list",
+>>>>>>> 6b8c2c55ba32db642eb5fccb6b9b283b62657eb7
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",

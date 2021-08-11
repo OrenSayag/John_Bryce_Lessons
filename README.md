@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # Todo
+=======
+# ShoppingList
+>>>>>>> 6b8c2c55ba32db642eb5fccb6b9b283b62657eb7
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
 

@@ -1,0 +1,27 @@
+<div class="right">
+  <div class="title">
+    <!-- 1. property binding (string only) -->
+    <h1 *ngIf="userType == 'user'">Hello, {{title}}</h1>
+    <h1 *ngIf="userType == 'admin'">Hello, my lord</h1>
+  </div>
+  <div class="pic">
+    <div class="pic">
+      <!-- 2. property binding -->
+      <img [src]="imgSrc" alt="" [width]='imgWidth'>
+      <div class="controls">
+        <!-- 3. (event binding) -->
+        <p>{{imgWidth}} px</p>
+        <button (click)="dec()">-</button>
+        <button (click)="reset()">=</button>
+        <button (click)="inc()">+</button>
+        <br>
+        <!-- 4 [(two way binding)]  -->
+        <input 
+        [value]='imgWidth'
+        type="range" min='100' max='500' step='10' (change)="range($event)" />
+      </div>
+    </div>
+  </div>
+
+
+</div>

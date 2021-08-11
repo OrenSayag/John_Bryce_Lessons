@@ -1,0 +1,28 @@
+<div class='left'>
+  <p>Menu:</p>
+  <ul>
+    <li *ngFor="let link of links">
+      <!-- <a [href]='link'
+    [ngClass]="{'sm':link.length<=4,'md':link.length>=5,'lg':link.length>=6}"
+    >{{link}} -->
+      <a [href]='link' [ngStyle]="{'color':link.length<=4 ? 'red' : 'yellow'}">{{link}}
+      </a>
+      <!-- <app-menu-item [linkto]='link' (newGrade)='handleNewGrade($event)'></app-menu-item> -->
+
+
+    </li>
+    <div class="edit">
+      <button
+      (click)='_ser.changeFname()'
+      >Change FN: current val({{_ser.user.fn}})</button>
+      <button
+      (click)='_ser.changeLname()'
+      >Change LN: current val({{_ser.user.ln}})</button>
+      <button
+      (click)='changeAge()'
+      >Change AGE: current val({{_ser.user.age}})</button>
+
+    </div>
+  </ul>
+</div>
+j
