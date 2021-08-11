@@ -1,0 +1,13 @@
+.prod-item {
+ border: 2px solid black;
+ display: flex;
+ flex-direction: column;
+ /* width: 200px; */
+ width: 100%;
+
+}
+
+img {
+  width: 100%;
+
+}

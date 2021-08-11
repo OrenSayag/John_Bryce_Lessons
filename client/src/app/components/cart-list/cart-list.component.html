@@ -1,0 +1,8 @@
+<div class="cart-list">
+  <a routerLink="/pay">Pay</a>
+  <span>SUM: {{ _data.getCartSum() | currency }}</span>
+  <app-cart-item 
+  *ngFor="let cart of _data.cartArr"
+  [cart]="cart"
+  ></app-cart-item>
+</div>

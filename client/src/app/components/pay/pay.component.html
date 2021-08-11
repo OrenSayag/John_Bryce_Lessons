@@ -1,0 +1,30 @@
+<div class="container">
+
+  <form [formGroup]="myForm" (ngSubmit)="_data.login(myForm.value.username, myForm.value.password)">
+
+
+
+    <div class="control">
+      <input [ngClass]="{'invalid':myForm.controls.cardNum.dirty && myForm.controls.cardNum.invalid }" type="text" placeholder="Card Number" formControlName="cardNum">
+      <span *ngIf="myForm.controls.cardNum.dirty && myForm.controls.cardNum.invalid">Card Number is required</span>
+    </div>
+
+    <div class="control">
+      <input [ngClass]="{'invalid':myForm.controls.cardExp.dirty && myForm.controls.cardExp.invalid }" type="text" placeholder="Card Expiration Is Required" formControlName="cardExp">
+      <span *ngIf="myForm.controls.cardExp.dirty && myForm.controls.cardExp.invalid && myForm.controls.cardExp.errors?.required">Card Expiration is required</span>
+      <span *ngIf="myForm.controls.cardExp.dirty && myForm.controls.cardExp.invalid && myForm.controls.cardExp.errors?.pattern">Card Expiration must be in mm/yy format</span>
+      <span *ngIf="myForm.controls.cardExp.dirty && myForm.controls.cardExp.invalid && myForm.controls.cardExp.errors?.pattern && myForm.controls.cardExp.errors.invalidMonth">Month range is between 1 and 12</span>
+    </div>  
+
+    <div class="control">
+      <input [ngClass]="{'invalid':myForm.controls.cvv.dirty && myForm.controls.cvv.invalid }" type="number" placeholder="CVV" formControlName="cvv">
+      <span *ngIf="myForm.controls.cvv.dirty && myForm.controls.cvv.invalid && (myForm.controls.cvv.errors?.min || myForm.controls.cvv.errors?.max)">CVV must be 3 digits</span>
+    </div>
+
+
+    <p>{{ myForm.controls.cardExp.errors |json }}</p>
+
+    <input type="submit" value="Pay">
+  </form>
+  <!-- <p>{{myForm.value | json}}</p> -->
+</div>

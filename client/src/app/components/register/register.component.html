@@ -1,0 +1,29 @@
+<div class="container">
+
+  <form [formGroup]="myForm" (ngSubmit)="_data.register(myForm.value.username, myForm.value.password, myForm.value.fname, myForm.value.lname)">
+
+
+
+    <div class="control">
+      <input [ngClass]="{'invalid':myForm.controls.username.dirty && myForm.controls.username.invalid }" type="text" placeholder="username" formControlName="username">
+      <span *ngIf="myForm.controls.username.dirty && myForm.controls.username.invalid">Username is required</span>
+    </div>
+
+    <div class="control">
+      <input [ngClass]="{'invalid':myForm.controls.password.dirty && myForm.controls.password.invalid }" type="password" placeholder="password" formControlName="password">
+      <span *ngIf="myForm.controls.password.dirty && myForm.controls.password.invalid">password is required</span>
+    </div>
+
+    <div class="control">
+      <input [ngClass]="{'invalid':myForm.controls.fname.dirty && myForm.controls.fname.invalid }" type="text" placeholder="fname" formControlName="fname">
+      <span *ngIf="myForm.controls.fname.dirty && myForm.controls.fname.invalid">fname is required</span>
+    </div>
+
+    <div class="control">
+      <input [ngClass]="{'invalid':myForm.controls.lname.dirty && myForm.controls.lname.invalid }" type="lname" placeholder="lname" formControlName="lname">
+      <span *ngIf="myForm.controls.lname.dirty && myForm.controls.lname.invalid">lname is required</span>
+    </div>
+    <input type="submit" value="Register">
+  </form>
+  <!-- <p>{{myForm.value | json}}</p> -->
+</div>
