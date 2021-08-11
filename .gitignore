@@ -1,5 +1,6 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
 # compiled output
@@ -50,6 +51,8 @@ Thumbs.db
 ./.env
 >>>>>>> 3bcc6ac33a3d4421319cf65132783be17f703536
 =======
+=======
+>>>>>>> 05a0de1b1ffaa48442a10d0d5276e702a5f9c7a7
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
@@ -73,4 +76,7 @@ Thumbs.db
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+<<<<<<< HEAD
 >>>>>>> 7028975de6447bca797df3b030c6f5d1386ae7b1
+=======
+>>>>>>> 05a0de1b1ffaa48442a10d0d5276e702a5f9c7a7

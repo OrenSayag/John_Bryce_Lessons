@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Cart from './components/Cart'
@@ -52,4 +53,33 @@ export default function App() {
             </div>
         </Router>
     )
+=======
+import React, { Component } from 'react'
+import Form from './components/Form'
+import List from './components/List'
+
+export default class App extends Component {
+
+  state = {
+    todos:[
+      {title:"eat something", completed:false},
+      {title:"read something", completed:true},
+      {title:"code something", completed:false},
+
+    ]
+  }
+
+  addToDo = (title)=> {
+      this.setState({todos:[...this.state.todos, {title, completed: false}]})
+  }
+
+  render() {
+    return (
+      <div>
+        <Form addToDo={this.addToDo}/>
+        <List todos={this.state.todos}/>
+      </div>
+    )
+  }
+>>>>>>> 05a0de1b1ffaa48442a10d0d5276e702a5f9c7a7
 }

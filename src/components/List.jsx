@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 import Item from './Item'
 
@@ -12,4 +13,17 @@ export default function List({menu, history, match, add}) {
             {/* {menu.map(item=><h1>HELLO</h1>)} */}
         </div>
     )
+=======
+import React, { Component } from 'react'
+import Item from './Item';
+
+export default class List extends Component {
+	render() {
+		return (
+			<div>
+				{this.props.todos.map(todo=>(<Item todo={todo} />))}
+			</div>
+		)
+	}
+>>>>>>> 05a0de1b1ffaa48442a10d0d5276e702a5f9c7a7
 }

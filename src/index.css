@@ -1,5 +1,6 @@
 body {
   margin: 0;
+<<<<<<< HEAD
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -70,4 +71,20 @@ body {
     width: 70px;
     height: 70px;
     
+=======
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.completed{
+  text-decoration: line-through;
+>>>>>>> 05a0de1b1ffaa48442a10d0d5276e702a5f9c7a7
 }

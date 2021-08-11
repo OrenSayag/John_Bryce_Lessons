@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from 'react'
 
 export default function Item({item, add}) {
@@ -10,3 +11,17 @@ export default function Item({item, add}) {
         </div>
     )
 }
+=======
+import React, { Component } from 'react'
+
+export default class Item extends Component {
+	render() {
+		return (
+			<div>
+				<input type="checkbox" checked={this.props.todo.completed}/>
+				<h1>{this.props.todo.title}</h1>
+			</div>
+		)
+	}
+}
+>>>>>>> 05a0de1b1ffaa48442a10d0d5276e702a5f9c7a7
