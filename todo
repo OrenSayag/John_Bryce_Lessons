@@ -1,0 +1,58 @@
+---- DONE ------
+generate all the components
+  - PostList
+  - PostPreview
+  - AddComponent
+  - SinglePost
+  - Navbar
+
+- Build the models
+  - PostModel
+    -title
+    -body
+    -author
+    -date
+  
+  - services
+    - post
+      - postArr: PostModule[]
+      - addPost() :void
+      - delPost() :void
+      - editPost() :void
+      - getSinglePost(id)
+- router
+  - 
+
+- css grid
+
+build the components:
+
+  - NavbarComponent
+    - link to PostsList ('/')
+    - link to Add ('/add')
+
+  - PostsList
+    - inject the service
+    - ngFor over the array
+    - <PostPreview [post]="post">
+
+  - PostPreviewComponent
+    - inject the service?
+    - @Input() 
+    - display the post
+    - link to redirect to "/post/:id"
+  
+  - SingPostComponent
+    - inject the service post
+    - inject the service ActivatedRoutee (_acr)
+    - display the post details
+
+---- TODO ------
+
+
+
+
+
+  - AddComponent
+    - inject the service post
+    - form to add post 

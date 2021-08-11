@@ -1,0 +1,33 @@
+.preview {
+  border-bottom: brown 1px solid;
+  padding: 25px 50px;
+  /* margin-top: 25px; */
+  margin-bottom: 25px;
+
+}
+
+h1 {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  padding-left: 50px;
+  margin-bottom: 20px;
+}
+
+p {
+  padding-left: 50px;
+
+}
+
+a {
+  text-decoration: none;
+  color: brown;
+}
+
+h1:hover{
+  border-bottom: brown 1px solid;
+  width: fit-content;
+  box-sizing: border-box;
+}
