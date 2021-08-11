@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "lesson43",
+=======
+  "name": "chat-app",
+>>>>>>> d0ab34b1be0dcd7f6045da17dbbc93bd9f7a8d1b
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,9 +14,14 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "mongoose": "^5.12.15"
+=======
+    "express": "^4.17.1",
+    "socket.io": "^4.1.2"
+>>>>>>> d0ab34b1be0dcd7f6045da17dbbc93bd9f7a8d1b
   }
 }
