@@ -1,0 +1,26 @@
+-------------- DONE ----------------
+-services
+  -data
+    - media[]
+    - records[]
+
+
+
+
+-------------- TODO ----------------
+  -functions
+    - add()
+    - delete()
+    - update()
+    - getRecords(medium_id)
+    
+- components:
+  - home:
+    - header
+    - list
+  - form:
+    - select
+    - inputs
+    - submit btn
+    
+
