@@ -1,9 +1,0 @@
-.list {
-  display: flex;
-  flex-wrap: wrap;
-
-}
-
-app-prod-item{
-  width: 33%;
-}
