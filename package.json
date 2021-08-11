@@ -1,11 +1,16 @@
 {
+<<<<<<< HEAD
   "name": "session-auth",
+=======
+  "name": "express-store",
+>>>>>>> b6937e472ac39653ba1234c7afac503ed387bb7c
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+<<<<<<< HEAD
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -14,5 +19,12 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1"
+=======
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "uuid": "^8.3.2"
+>>>>>>> b6937e472ac39653ba1234c7afac503ed387bb7c
   }
 }
